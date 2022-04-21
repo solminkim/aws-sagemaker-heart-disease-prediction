@@ -25,11 +25,19 @@ Quick Start 설정
 사전 설정:
 1.	AWS에 로그인하거나 [계정을 생성](https://us-west-2.console.aws.amazon.com)
 2.	[S3 버킷을 생성합니다](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+<<<<<<< HEAD
    - 중요: 버킷 이름이 'sagemaker'로 시작하는지 확인하십시오. 이렇게 해야 SageMaker가 버킷에 액세스할 수 있습니다
    - 리전을 기록해 두십시오. 사용된 모든 서비스가 S3 버킷과 동일한 지역에 있는지 확인합니다.
 3.	**/src/main/resources** 디렉터리에 있는 **'heart.csv'** 파일을 위에서 생성한 S3 버킷에 업로드합니다.
 4.	생성한 S3 버킷의 루트 디렉토리에 제공된 패키지 코드 **‘heart_function-1.0.0’** 를 업로드합니다.
 5. **heart-disease-prediction.ipynb** 파일을 로컬 컴퓨터에 다운로드 합니다.
+=======
+      - 중요: 버킷 이름이 'sagemaker'로 시작하는지 확인하십시오. 이렇게 해야 SageMaker가 버킷에 액세스할 수 있습니다.
+      - 리전을 기록해 두십시오. 사용된 모든 서비스가 S3 버킷과 동일한 지역에 있는지 확인합니다.
+5.	**/src/main/resources** 디렉터리에 있는 **'heart.csv'** 파일을 위에서 생성한 S3 버킷에 업로드합니다.
+6.	생성한 S3 버킷의 루트 디렉토리에 제공된 패키지 코드 **‘heart_function-1.0.0’** 를 업로드합니다.
+7. **heart-disease-prediction.ipynb** 파일을 로컬 컴퓨터에 다운로드 합니다.
+>>>>>>> dc6a4b30089f187c7cab47e439793b84d2285e00
 
 ### SageMaker 모델 학습
 이 섹션에서는 AWS SageMaker를 사용하여 샘플 jupyter 노트북을 가져오고 심장 질환을 예측할 수 있는 모델을 학습합니다. 모델이 학습되면 SageMaker에서 직접 호스팅됩니다.
@@ -69,7 +77,7 @@ Quick Start 설정
 ![endpoint](heart-disease-predictor/src/main/resources/images/sageMakerEndpoint.png)
 
 15.	나머지 셀을 계속 실행하여 SageMaker 모델에 대한 예측을 얻을 수 있습니다.
-경고: '(옵션) 엔드포인트 삭제' 셀을 실행하지 마십시오.
+      경고: '(옵션) 엔드포인트 삭제' 셀을 실행하지 마십시오.
 
 ### Cloud Formation 템플릿 배포
 
@@ -83,11 +91,11 @@ Quick Start 설정
 3.	**Template is ready** 을 선택 후 **Upload a template file** 을 선택합니다.
 4.	프로젝트 루트 디렉토리에 있는 **cloud_formation_template.yaml** 파일을 선택합니다.
 5.	다음 페이지에서 Stack 설정을 진행합니다.
-   a.	**stack name** 설정
-   b.	앞서서 생성한 **S3 버킷명** 입력
-   c.	**Email** 주소 입력. 이 메일 주소는 심장 질환이 예측될 경우 알림을 보내는 데 사용됩니다.
-   d.	업로드한 **lambda code** 입력 (앞서 S3 버킷에 업로드한 코드 입니다)
-   e.	**SageMaker endpoint** 를 입력 (앞서 복사한 endpoint)
+   - **stack name** 설정
+   - 앞서서 생성한 **S3 버킷명** 입력
+   - **Email** 주소 입력. 이 메일 주소는 심장 질환이 예측될 경우 알림을 보내는 데 사용됩니다.
+   - 업로드한 **lambda code** 입력 (앞서 S3 버킷에 업로드한 코드 입니다)
+   - **SageMaker endpoint** 를 입력 (앞서 복사한 endpoint)
 
 ![stack](heart-disease-predictor/src/main/resources/images/cloudformationStack.png)
 
