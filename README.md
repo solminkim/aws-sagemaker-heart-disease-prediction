@@ -83,11 +83,11 @@ Quick Start 설정
 3.	**Template is ready** 을 선택 후 **Upload a template file** 을 선택합니다.
 4.	프로젝트 루트 디렉토리에 있는 **cloud_formation_template.yaml** 파일을 선택합니다.
 5.	다음 페이지에서 Stack 설정을 진행합니다.
-   a.	**stack name** 설정
-   b.	앞서서 생성한 **S3 버킷명** 입력
-   c.	**Email** 주소 입력. 이 메일 주소는 심장 질환이 예측될 경우 알림을 보내는 데 사용됩니다.
-   d.	업로드한 **lambda code** 입력 (앞서 S3 버킷에 업로드한 코드 입니다)
-   e.	**SageMaker endpoint** 를 입력 (앞서 복사한 endpoint)
+   - **stack name** 설정
+   - 앞서서 생성한 **S3 버킷명** 입력
+   - **Email** 주소 입력. 이 메일 주소는 심장 질환이 예측될 경우 알림을 보내는 데 사용됩니다.
+   - 업로드한 **lambda code** 입력 (앞서 S3 버킷에 업로드한 코드 입니다)
+   - **SageMaker endpoint** 를 입력 (앞서 복사한 endpoint)
 
 ![stack](heart-disease-predictor/src/main/resources/images/cloudformationStack.png)
 
